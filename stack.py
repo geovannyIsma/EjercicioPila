@@ -54,6 +54,20 @@ class Stack:
             raise IndexError("La pila está vacía")
         return self.top.value
 
+    def get_length(self):
+        """
+        Devuelve la longitud de la pila.
+
+        Returns:
+            int: La longitud de la pila.
+        """
+        length = 0
+        actual = self.top
+        while actual:
+            length += 1
+            actual = actual.next
+        return length
+
     def print(pila, nombre="Pila"):
         print(f"{nombre}: ", end='')
         elementos = []
